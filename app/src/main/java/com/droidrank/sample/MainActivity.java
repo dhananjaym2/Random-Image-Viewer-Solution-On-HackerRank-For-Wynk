@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements FetchImagesDataAP
     private void showImage(int index) {
 
         if (image_Pojo_ArrayList.get(index).getLocalImagePath() == null) {
-            /*Download image and save it locally*/
+            /*Download image and save it locally and then bitmap display from local*/
             DownloadBitmap downloadBitmap = new DownloadBitmap(MainActivity.this,
                     MainActivity.this);
             Utility.execute(downloadBitmap, image_Pojo_ArrayList.get(index).getImageUrl());
